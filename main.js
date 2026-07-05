@@ -16,11 +16,9 @@
   const iconOff = document.getElementById('icon-sound-off');
   let hasTriggered = false;
 
-  // Randomly select one of the two music tracks
+  // Use the single 20-25s music track
   if (bgMusic) {
-    const tracks = ['/music1.mp3', '/music2.mp3'];
-    const randomTrack = tracks[Math.floor(Math.random() * tracks.length)];
-    bgMusic.src = randomTrack;
+    bgMusic.src = '/music1.mp3';
   }
 
   // Show stars after initial content fades in

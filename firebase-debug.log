@@ -1,17 +1,17 @@
-[debug] [2026-07-05T19:49:52.977Z] ----------------------------------------------------------------------
-[debug] [2026-07-05T19:49:52.979Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\SAFFIKKA\Documents\shaheel\Shaheera\node_modules\firebase-tools\lib\bin\firebase.js deploy
-[debug] [2026-07-05T19:49:52.979Z] CLI Version:   15.22.4
-[debug] [2026-07-05T19:49:52.979Z] Platform:      win32
-[debug] [2026-07-05T19:49:52.979Z] Node Version:  v24.14.0
-[debug] [2026-07-05T19:49:52.979Z] Detected Agent: antigravity
-[debug] [2026-07-05T19:49:52.979Z] Time:          Mon Jul 06 2026 01:19:52 GMT+0530 (India Standard Time)
-[debug] [2026-07-05T19:49:52.979Z] ----------------------------------------------------------------------
+[debug] [2026-07-05T20:03:19.292Z] ----------------------------------------------------------------------
+[debug] [2026-07-05T20:03:19.293Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\SAFFIKKA\Documents\shaheel\Shaheera\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-07-05T20:03:19.294Z] CLI Version:   15.22.4
+[debug] [2026-07-05T20:03:19.294Z] Platform:      win32
+[debug] [2026-07-05T20:03:19.294Z] Node Version:  v24.14.0
+[debug] [2026-07-05T20:03:19.294Z] Detected Agent: antigravity
+[debug] [2026-07-05T20:03:19.294Z] Time:          Mon Jul 06 2026 01:33:19 GMT+0530 (India Standard Time)
+[debug] [2026-07-05T20:03:19.294Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2026-07-05T19:49:54.674Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2026-07-05T19:49:54.675Z] > authorizing via signed-in user (shaheelahamed6394@gmail.com)
-[debug] [2026-07-05T19:49:54.675Z] [iam] checking project shaheera-9715d for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2026-07-05T19:49:54.676Z] Checked if tokens are valid: true, expires at: 1783282680328
-[debug] [2026-07-05T19:49:54.676Z] Checked if tokens are valid: true, expires at: 1783282680328
-[debug] [2026-07-05T19:49:54.677Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/shaheera-9715d:testIamPermissions [none]
-[debug] [2026-07-05T19:49:54.677Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/shaheera-9715d:testIamPermissions  x-goog-user-project=shaheera-9715d
-[debug] [2026-07-05T19:49:54.677Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/shaheera-9715d:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-07-05T20:03:21.975Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-07-05T20:03:21.976Z] > authorizing via signed-in user (shaheelahamed6394@gmail.com)
+[debug] [2026-07-05T20:03:21.976Z] [iam] checking project shaheera-9715d for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-07-05T20:03:21.977Z] Checked if tokens are valid: false, expires at: 1783282680328
+[debug] [2026-07-05T20:03:21.977Z] Checked if tokens are valid: false, expires at: 1783282680328
+[debug] [2026-07-05T20:03:21.977Z] > refreshing access token with scopes: []
+[debug] [2026-07-05T20:03:21.978Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-07-05T20:03:21.978Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]

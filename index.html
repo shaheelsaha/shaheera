@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaheel &amp; Atheera — Nikkah Invitation</title>
+  <meta name="description" content="You are cordially invited to celebrate the Nikkah of Shaheel &amp; Atheera on July 19, 2026 at Amman Marriage Hall, Thopputhurai." />
+  <meta name="theme-color" content="#050510" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=Inter:wght@300;400;500&amp;family=Amiri:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/sections.css" />
+
+  <style>
+    /* ═══════════════════════════════════════
+       IMMERSIVE SPACE — No Boxes, Free-flowing
+       ═══════════════════════════════════════ */
+    :root {
+      --space-deep: #050510;
+      --nebula-purple: #c084fc;
+      --nebula-blue: #60a5fa;
+      --nebula-pink: #ff6b9d;
+      --cosmic-rose: #fb7185;
+    }
+    body { background: var(--space-deep) !important; }
+
+    /* ── Animated Space Background ── */
+    .space-bg {
+      position: fixed; inset: 0; z-index: 0; overflow: hidden;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(88,28,135,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(30,64,175,0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 80%, rgba(190,24,93,0.08) 0%, transparent 50%),
+        var(--space-deep);
+    }
+    .space-bg__stars {
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1px 1px at 25% 35%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1.5px 1.5px at 40% 10%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(1px 1px at 55% 45%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1.5px 1.5px at 85% 55%, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1px 1px at 15% 65%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(1px 1px at 90% 80%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 35% 75%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(2px 2px at 60% 90%, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 5% 90%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1px 1px at 50% 5%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 75% 70%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1.5px 1.5px at 20% 50%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(1px 1px at 95% 40%, rgba(255,255,255,0.8), transparent);
+      animation: twinkle 4s ease-in-out infinite alternate;
+    }
+    .space-bg__stars-2 {
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 12% 22%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1.5px 1.5px at 33% 8%, rgba(251,191,36,0.7), transparent),
+        radial-gradient(1px 1px at 48% 58%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 62% 15%, rgba(192,132,252,0.6), transparent),
+        radial-gradient(1px 1px at 78% 42%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(1.5px 1.5px at 88% 68%, rgba(96,165,250,0.6), transparent),
+        radial-gradient(1px 1px at 8% 78%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 42% 92%, rgba(251,191,36,0.4), transparent);
+      animation: twinkle 5s ease-in-out 1s infinite alternate-reverse;
+    }
+    @keyframes twinkle { 0% { opacity: 0.6; } 100% { opacity: 1; } }
+
+    .space-bg__nebula {
+      position: absolute; width: 150%; height: 150%; top: -25%; left: -25%;
+      background:
+        radial-gradient(ellipse at 30% 40%, rgba(139,92,246,0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 60%, rgba(244,63,94,0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 20%, rgba(59,130,246,0.05) 0%, transparent 40%);
+      animation: nebulaDrift 25s ease-in-out infinite alternate;
+    }
+    @keyframes nebulaDrift {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(3%, -2%) rotate(3deg); }
+    }
+
+    /* Shooting Stars */
+    .shooting-star {
+      position: fixed; width: 120px; height: 1px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.8), transparent);
+      top: 15%; left: -150px; z-index: 1; transform: rotate(-25deg);
+      animation: shootingStar 6s cubic-bezier(0.4,0,0.2,1) infinite 3s;
+    }
+    .shooting-star:nth-child(2) {
+      top: 45%; width: 80px; animation-delay: 9s; animation-duration: 5s; transform: rotate(-35deg);
+    }
+    @keyframes shootingStar {
+      0% { left: -150px; opacity: 0; }
+      5% { opacity: 1; }
+      30% { left: 110%; opacity: 0; }
+      100% { left: 110%; opacity: 0; }
+    }
+
+    /* ═══════════════════════════════════════
+       PAGE 1 — IMMERSIVE INVITATION
+       ═══════════════════════════════════════ */
+    .hero {
+      min-height: 100vh; min-height: 100dvh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; background: transparent !important;
+      padding: 2rem 1rem;
+    }
+    .hero__bg-pattern, .hero__overlay { display: none !important; }
+    .hero__content {
+      position: relative; z-index: 5;
+      max-width: 700px; width: 100%;
+    }
+    .hero__ornament-frame { display: none !important; }
+
+    /* Blessing */
+    .inv-arabic {
+      font-family: 'Amiri', serif; font-size: 1.8rem;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 0.3rem; direction: rtl;
+    }
+    .inv-blessing {
+      font-family: var(--body); font-size: 1rem; font-style: italic;
+      color: rgba(255, 255, 255, 0.9); letter-spacing: 0.08em;
+      margin-bottom: 0.8rem;
+    }
+    .inv-families {
+      font-family: var(--sans); font-size: 0.6rem;
+      letter-spacing: 0.4em; text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7); margin-bottom: 3rem;
+      font-weight: 500;
+    }
+
+    /* ── Names with Orbital Ring ── */
+    .names-block {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+    .name-main {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.1;
+      text-shadow: 0 0 60px rgba(192,132,252,0.2), 0 0 120px rgba(139,92,246,0.08);
+      display: block;
+      letter-spacing: -0.02em;
+    }
+    .name-details {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: var(--nebula-purple);
+      margin-top: 0.5rem;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .name-parent {
+      font-family: var(--body);
+      font-size: 0.95rem;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 0.3rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* Orbital Ring between names */
+    .orbital-ring {
+      position: relative;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0.5rem 0;
+    }
+    .orbital-ring__circle {
+      width: 80px; height: 80px;
+      border: 1px solid rgba(192,132,252,0.15);
+      border-radius: 50%;
+      position: absolute;
+      animation: orbitSpin 12s linear infinite;
+    }
+    .orbital-ring__circle:nth-child(2) {
+      width: 100px; height: 100px;
+      border-color: rgba(96,165,250,0.08);
+      animation-duration: 18s;
+      animation-direction: reverse;
+    }
+    .orbital-ring__circle:nth-child(3) {
+      width: 60px; height: 60px;
+      border-color: rgba(251,113,133,0.1);
+      animation-duration: 9s;
+    }
+    /* Orbital dot */
+    .orbital-ring__circle::after {
+      content: '';
+      position: absolute;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      top: -2px; left: 50%; transform: translateX(-50%);
+    }
+    .orbital-ring__circle:first-child::after {
+      background: var(--nebula-purple);
+      box-shadow: 0 0 8px var(--nebula-purple);
+    }
+    .orbital-ring__circle:nth-child(2)::after {
+      background: var(--nebula-blue);
+      box-shadow: 0 0 8px var(--nebula-blue);
+    }
+    .orbital-ring__circle:nth-child(3)::after {
+      background: var(--cosmic-rose);
+      box-shadow: 0 0 8px var(--cosmic-rose);
+    }
+    @keyframes orbitSpin { to { transform: rotate(360deg); } }
+
+    /* Center Heart */
+    .orbital-ring__heart {
+      font-size: 1.3rem;
+      z-index: 2;
+      background: linear-gradient(135deg, var(--nebula-pink), var(--nebula-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; background-clip: text;
+      filter: drop-shadow(0 0 12px rgba(192,132,252,0.4));
+      animation: heartFloat 3s ease-in-out infinite;
+    }
+    @keyframes heartFloat {
+      0%, 100% { transform: scale(1) translateY(0); }
+      50% { transform: scale(1.1) translateY(-3px); }
+    }
+
+    .inv-honor {
+      font-family: var(--sans); font-size: 0.6rem;
+      letter-spacing: 0.35em; text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7); margin-bottom: 3.5rem;
+      font-weight: 500;
+    }
+
+    /* ── Free-floating Details (no box!) ── */
+    .details-float {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 3rem;
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+    }
+    .detail-item {
+      position: relative;
+    }
+    .detail-item__icon {
+      width: 28px; height: 28px;
+      margin: 0 auto 0.6rem;
+      color: rgba(192,132,252,0.8);
+    }
+    .detail-item__icon svg {
+      width: 100%; height: 100%;
+    }
+    .detail-item__label {
+      font-family: var(--sans); font-size: 0.55rem;
+      letter-spacing: 0.25em; text-transform: uppercase;
+      color: rgba(192,132,252,0.9); margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+    .detail-item__value {
+      font-family: var(--body); font-size: 1.1rem;
+      color: #ffffff;
+      font-weight: 500;
+    }
+    .detail-item__value--sub {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 0.2rem;
+      line-height: 1.4;
+    }
+
+    /* Constellation lines connecting details */
+    .details-float::before {
+      content: '';
+      position: absolute;
+      left: 50%; top: 0; bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(192,132,252,0.08), transparent);
+    }
+    .details-float::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(192,132,252,0.08), transparent);
+    }
+
+    /* Action Buttons */
+    .cosmic-actions {
+      display: flex; gap: 1rem;
+      justify-content: center; flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .cosmic-btn {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      padding: 0.65rem 1.5rem;
+      border: 1px solid rgba(192,132,252,0.15);
+      border-radius: 50px;
+      font-family: var(--sans); font-size: 0.6rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: rgba(192,132,252,0.6);
+      background: transparent;
+      transition: all 0.4s var(--ease);
+      position: relative; overflow: hidden;
+    }
+    .cosmic-btn::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(192,132,252,0.12), rgba(96,165,250,0.08));
+      opacity: 0; transition: opacity 0.4s; border-radius: 50px;
+    }
+    .cosmic-btn:hover::before { opacity: 1; }
+    .cosmic-btn:hover {
+      color: #fff;
+      border-color: rgba(192,132,252,0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(139,92,246,0.15);
+    }
+    .cosmic-btn svg { width: 13px; height: 13px; position: relative; z-index: 1; }
+    .cosmic-btn span { position: relative; z-index: 1; }
+
+    /* Scroll CTA */
+    .space-scroll {
+      display: inline-flex; flex-direction: column; align-items: center;
+      gap: 0.6rem; color: rgba(255,255,255,0.15);
+      font-family: var(--sans); font-size: 0.55rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .space-scroll:hover { color: var(--nebula-purple); }
+    .space-scroll__line {
+      width: 1px; height: 30px;
+      background: linear-gradient(to bottom, rgba(192,132,252,0.3), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; height: 30px; }
+      50% { opacity: 1; height: 40px; }
+    }
+
+    /* ═══════════════════════════════════════
+       PAGE 2 — COSMIC COUNTDOWN + RSVP
+       ═══════════════════════════════════════ */
+    .page-two {
+      position: relative; z-index: 2;
+      padding: 6rem 0 3rem; background: transparent;
+    }
+    .page-two .container {
+      position: relative; z-index: 2;
+      max-width: 700px; margin: 0 auto; padding: 0 2rem;
+    }
+
+    /* ── Orb Countdown ── */
+    .orb-countdown {
+      text-align: center; margin-bottom: 5rem;
+    }
+    .orb-countdown__label {
+      font-family: var(--sans); font-size: 0.55rem;
+      letter-spacing: 0.4em; text-transform: uppercase;
+      color: rgba(255,255,255,0.2); margin-bottom: 2.5rem;
+    }
+    .orb-countdown__grid {
+      display: flex; justify-content: center; align-items: center; gap: 1.5rem;
+    }
+    .orb-countdown__unit {
+      position: relative;
+      width: clamp(75px, 14vw, 100px);
+      height: clamp(75px, 14vw, 100px);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 35%, rgba(192,132,252,0.06), rgba(5,5,16,0.8) 70%);
+      border: 1px solid rgba(192,132,252,0.1);
+      transition: border-color 0.4s, box-shadow 0.4s;
+    }
+    .orb-countdown__unit:hover {
+      border-color: rgba(192,132,252,0.25);
+      box-shadow: 0 0 30px rgba(139,92,246,0.1);
+    }
+    /* Orbital ring around each orb */
+    .orb-countdown__unit::after {
+      content: '';
+      position: absolute; inset: -8px;
+      border-radius: 50%;
+      border: 1px solid rgba(192,132,252,0.05);
+      animation: orbitSpin 15s linear infinite;
+    }
+    .orb-countdown__unit:nth-child(2)::after { animation-duration: 20s; animation-direction: reverse; }
+    .orb-countdown__unit:nth-child(4)::after { animation-duration: 12s; }
+    .orb-countdown__unit:nth-child(6)::after { animation-duration: 18s; animation-direction: reverse; }
+
+    .orb-countdown__number {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      background: linear-gradient(180deg, #fff 20%, rgba(192,132,252,0.6));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; background-clip: text;
+      line-height: 1; font-weight: 300;
+    }
+    .orb-countdown__text {
+      font-family: var(--sans); font-size: 0.45rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.2); margin-top: 0.3rem;
+    }
+    .orb-countdown__sep {
+      font-family: var(--serif); font-size: 1.2rem;
+      color: rgba(192,132,252,0.15);
+    }
+
+    /* ── Constellation Divider ── */
+    .constellation-divider {
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; margin: 0 auto 5rem;
+    }
+    .constellation-divider__dot {
+      width: 3px; height: 3px; border-radius: 50%;
+      background: rgba(192,132,252,0.3);
+      box-shadow: 0 0 5px rgba(192,132,252,0.2);
+    }
+    .constellation-divider__dot--center {
+      width: 5px; height: 5px;
+      background: var(--nebula-purple);
+      box-shadow: 0 0 10px var(--nebula-purple), 0 0 20px rgba(192,132,252,0.2);
+    }
+    .constellation-divider__line {
+      width: 25px; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192,132,252,0.2), transparent);
+    }
+
+    /* ── Cosmic RSVP ── */
+    .cosmic-rsvp { text-align: center; }
+    .cosmic-rsvp__label {
+      font-family: var(--serif); font-size: clamp(1.2rem, 3vw, 1.6rem);
+      color: rgba(255,255,255,0.7); margin-bottom: 0.5rem;
+      font-style: italic;
+    }
+    .cosmic-rsvp__sub {
+      font-family: var(--sans); font-size: 0.55rem;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: rgba(255,255,255,0.2); margin-bottom: 2.5rem;
+    }
+    .cosmic-rsvp__choices {
+      display: flex; gap: 1.5rem;
+      justify-content: center; flex-wrap: wrap;
+    }
+    .cosmic-rsvp__choice {
+      display: flex; align-items: center; gap: 0.8rem;
+      padding: 1rem 2.2rem;
+      border-radius: 50px;
+      font-family: var(--sans); font-size: 0.85rem;
+      font-weight: 500; letter-spacing: 0.03em;
+      transition: all 0.5s var(--ease); cursor: pointer;
+      position: relative;
+    }
+    .cosmic-rsvp__choice--yes {
+      border: 1px solid rgba(251,113,133,0.2);
+      color: rgba(255,255,255,0.5);
+      background: transparent;
+    }
+    .cosmic-rsvp__choice--yes.active {
+      background: linear-gradient(135deg, rgba(244,63,94,0.85), rgba(219,39,119,0.9));
+      color: #fff; border-color: transparent;
+      box-shadow: 0 0 30px rgba(244,63,94,0.25), 0 10px 25px rgba(244,63,94,0.12), inset 0 1px 0 rgba(255,255,255,0.15);
+      transform: scale(1.02);
+    }
+    .cosmic-rsvp__choice--no {
+      border: 1px solid rgba(255,255,255,0.07);
+      color: rgba(255,255,255,0.25);
+      background: transparent;
+    }
+    .cosmic-rsvp__choice--no.active {
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.7);
+      border-color: rgba(255,255,255,0.15);
+    }
+    .cosmic-rsvp__choice svg { width: 15px; height: 15px; }
+
+    /* ── Cosmic Footer ── */
+    .cosmic-footer {
+      text-align: center; padding: 4rem 0 2rem;
+      margin-top: 5rem;
+    }
+    .cosmic-footer__line {
+      display: flex; align-items: center; justify-content: center;
+      gap: 1rem; margin-bottom: 1.5rem;
+    }
+    .cosmic-footer__line-seg {
+      width: 50px; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192,132,252,0.15));
+    }
+    .cosmic-footer__line-seg:last-child {
+      background: linear-gradient(90deg, rgba(192,132,252,0.15), transparent);
+    }
+    .cosmic-footer__star {
+      width: 6px; height: 6px;
+      background: rgba(192,132,252,0.3);
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(192,132,252,0.2);
+    }
+    .cosmic-footer__names {
+      font-family: var(--serif); font-size: 1.8rem;
+      background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(192,132,252,0.6));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: 0.3rem;
+    }
+    .cosmic-footer__date {
+      font-family: var(--sans); font-size: 0.55rem;
+      letter-spacing: 0.3em; color: rgba(192,132,252,0.3);
+      margin-bottom: 0.3rem;
+    }
+    .cosmic-footer__tag {
+      font-family: var(--sans); font-size: 0.55rem;
+      letter-spacing: 0.25em;
+      color: rgba(251,113,133,0.35); margin-bottom: 2rem;
+    }
+    .cosmic-footer__credit {
+      font-family: var(--sans); font-size: 0.5rem;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255,255,255,0.12);
+    }
+    .cosmic-footer__credit span {
+      color: rgba(251,113,133,0.4); font-weight: 600;
+    }
+    
+    /* RSVP Form Elements */
+    .cosmic-input {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(192,132,252,0.2);
+      border-radius: 50px;
+      padding: 1rem 1.5rem;
+      width: 100%; max-width: 320px;
+      color: #fff;
+      font-family: var(--sans); font-size: 0.85rem;
+      text-align: center; margin-bottom: 1.5rem;
+      outline: none; transition: all 0.3s;
+    }
+    .cosmic-input:focus {
+      border-color: rgba(192,132,252,0.6);
+      box-shadow: 0 0 20px rgba(192,132,252,0.15);
+      background: rgba(255,255,255,0.08);
+    }
+    .cosmic-input::placeholder { color: rgba(255,255,255,0.3); }
+    .cosmic-btn--submit {
+      margin-top: 1.5rem;
+      background: linear-gradient(135deg, rgba(192,132,252,0.15), rgba(96,165,250,0.1));
+      border: 1px solid rgba(192,132,252,0.4);
+      padding: 0.8rem 2.5rem;
+    }
+    .cosmic-btn--submit:hover {
+      background: linear-gradient(135deg, rgba(192,132,252,0.3), rgba(96,165,250,0.2));
+      border-color: rgba(192,132,252,0.8);
+    }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════ */
+    @media (max-width: 520px) {
+      .details-float { grid-template-columns: 1fr; gap: 1.8rem; }
+      .details-float::before, .details-float::after { display: none; }
+      .orb-countdown__grid { gap: 0.8rem; }
+      .orb-countdown__unit {
+        width: 60px; height: 60px;
+      }
+      .orb-countdown__unit::after { inset: -5px; }
+      .cosmic-rsvp__choices { flex-direction: column; align-items: center; }
+      .cosmic-actions { flex-direction: column; align-items: center; }
+    }
+  
+    /* ── STAR COLLISION PRELOADER ── */
+    .preloader {
+      background: var(--space-deep) !important;
+      overflow: hidden;
+    }
+    .preloader__star {
+      position: absolute; width: 100px; height: 100px;
+      z-index: 20; opacity: 0;
+      display: flex; justify-content: center; align-items: center;
+    }
+    .preloader__star--left { top: 10%; left: 8%; }
+    .preloader__star--right { top: 10%; right: 8%; }
+
+    /* Stars fade in on load */
+    .preloader__star.visible {
+      animation: starFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes starFadeIn {
+      0% { opacity: 0; transform: scale(0); }
+      60% { opacity: 1; transform: scale(1.1); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* Stars fly to center, join, compress, then vanish */
+    .preloader__star.collide.preloader__star--left {
+      animation: starJoinLeft 1.3s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+    }
+    .preloader__star.collide.preloader__star--right {
+      animation: starJoinRight 1.3s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+    }
+
+    @keyframes starJoinLeft {
+      0%   { top: 10%; left: 8%; transform: scale(1); opacity: 1; }
+      40%  { transform: scale(1.3); opacity: 1; }
+      75%  { top: calc(50% - 50px); left: calc(50% - 50px); transform: scale(0.7); opacity: 1; }
+      90%  { top: calc(50% - 50px); left: calc(50% - 50px); transform: scale(0.15); opacity: 1; }
+      100% { top: calc(50% - 50px); left: calc(50% - 50px); transform: scale(0); opacity: 0; }
+    }
+    @keyframes starJoinRight {
+      0%   { top: 10%; right: 8%; transform: scale(1); opacity: 1; }
+      40%  { transform: scale(1.3); opacity: 1; }
+      75%  { top: calc(50% - 50px); right: calc(50% - 50px); transform: scale(0.7); opacity: 1; }
+      90%  { top: calc(50% - 50px); right: calc(50% - 50px); transform: scale(0.15); opacity: 1; }
+      100% { top: calc(50% - 50px); right: calc(50% - 50px); transform: scale(0); opacity: 0; }
+    }
+    .hero__star-core {
+      position: absolute; width: 4px; height: 4px; background: #fff;
+      border-radius: 50%; box-shadow: 0 0 10px #fff, 0 0 20px var(--nebula-purple);
+      z-index: 2;
+    }
+    .hero__star-ray {
+      position: absolute; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9), transparent);
+    }
+    .hero__star-ray--h { width: 100%; height: 2px; }
+    .hero__star-ray--v { height: 100%; width: 2px; background: linear-gradient(180deg, transparent, rgba(255,255,255,0.9), transparent); }
+    .hero__star-ray--d1 { width: 70%; height: 1px; transform: rotate(45deg); opacity: 0.6; }
+    .hero__star-ray--d2 { width: 70%; height: 1px; transform: rotate(-45deg); opacity: 0.6; }
+    .hero__star-glow {
+      position: absolute; width: 60px; height: 60px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(192,132,252,0.6) 0%, transparent 70%);
+      filter: blur(8px); mix-blend-mode: screen;
+    }
+
+    /* Preloader Glitch & Text Fade */
+    .preloader__glitch {
+      position: absolute; inset: 0; background: rgba(255,255,255,0.1);
+      mix-blend-mode: overlay; opacity: 0; pointer-events: none; z-index: 50;
+    }
+    .preloader__glitch.active { animation: preloaderGlitch 0.3s steps(2) forwards; }
+    @keyframes preloaderGlitch { 0% { opacity: 0; transform: translate(0); } 20% { opacity: 1; transform: translate(-10px, 5px); } 40% { opacity: 1; transform: translate(10px, -5px); } 60% { opacity: 1; transform: translate(-5px, 5px); } 80% { opacity: 0; transform: translate(0); } 100% { opacity: 0; } }
+    
+    .preloader.colliding .preloader__inner, 
+    .preloader.colliding .preloader__tap {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═ ANIMATED SPACE BACKGROUND ═ -->
+  <div class="space-bg">
+    <div class="space-bg__stars"></div>
+    <div class="space-bg__stars-2"></div>
+    <div class="space-bg__nebula"></div>
+  </div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+
+  <!-- ═ PRELOADER ═ -->
+  <div id="preloader" class="preloader">
+    <div class="preloader__star preloader__star--left" id="star-left">
+      <div class="hero__star-core"></div>
+      <div class="hero__star-ray hero__star-ray--v"></div>
+      <div class="hero__star-ray hero__star-ray--h"></div>
+      <div class="hero__star-ray hero__star-ray--d1"></div>
+      <div class="hero__star-ray hero__star-ray--d2"></div>
+      <div class="hero__star-glow"></div>
+    </div>
+    <div class="preloader__star preloader__star--right" id="star-right">
+      <div class="hero__star-core"></div>
+      <div class="hero__star-ray hero__star-ray--v"></div>
+      <div class="hero__star-ray hero__star-ray--h"></div>
+      <div class="hero__star-ray hero__star-ray--d1"></div>
+      <div class="hero__star-ray hero__star-ray--d2"></div>
+      <div class="hero__star-glow"></div>
+    </div>
+    
+    <!-- Center Content -->
+    <div class="preloader__inner" style="z-index: 10;">
+      <p class="preloader__arabic" style="font-family: var(--serif); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 400; letter-spacing: 0.15em; margin-bottom: 1.2rem; direction: ltr; background: linear-gradient(135deg, #fff, rgba(192,132,252,0.8)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">S &amp; A</p>
+      <p style="font-family: 'Amiri', serif; font-size: 1.6rem; color: rgba(255,255,255,0.9); margin-bottom: 0.3rem; direction: rtl;">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+      <p class="preloader__translation" style="font-size: 0.85rem; color: rgba(192,132,252,0.7); font-style: italic; letter-spacing: 0.06em;">In the name of God, the Most Gracious, the Most Merciful</p>
+      <div class="preloader__line" style="background: linear-gradient(90deg, transparent, var(--nebula-purple), transparent); margin-top: 2rem;"></div>
+    </div>
+    
+    <div class="preloader__tap" id="tap-prompt" style="z-index: 10;">
+      <span>Tap to begin</span>
+      <div class="preloader__tap-pulse"></div>
+    </div>
+    <div class="preloader__glitch" id="glitch-overlay"></div>
+    <div class="preloader__flash" id="flash-overlay"></div>
+  </div>
+
+  <!-- ═ PARTICLES ═ -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE 1 — IMMERSIVE FLOATING INVITATION
+  ═══════════════════════════════════════════════ -->
+  <section id="hero" class="hero">
+    <div class="hero__bg-pattern"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <div class="hero__ornament-frame"></div>
+
+      <p class="inv-arabic reveal-up">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+      <p class="inv-blessing reveal-up">In the name of God, the Most Gracious, the Most Merciful</p>
+      <p class="inv-families reveal-up" data-delay="100">TOGETHER WITH THEIR FAMILIES</p>
+
+      <!-- Names with Orbital Ring -->
+      <div class="names-block">
+        <span class="name-main reveal-up" data-delay="200">Shaheel Ahamed</span>
+        <p class="name-details reveal-up" data-delay="250">M.B.A. (Entrepreneurship)</p>
+        <p class="name-parent reveal-up" data-delay="300">S/o Haji S. H. Shagabtheen, Thopputhurai</p>
+        
+        <div class="orbital-ring reveal-up" data-delay="400">
+          <div class="orbital-ring__circle"></div>
+          <div class="orbital-ring__circle"></div>
+          <div class="orbital-ring__circle"></div>
+          <span class="orbital-ring__heart">&hearts;</span>
+        </div>
+        
+        <span class="name-main reveal-up" data-delay="600">Atheera</span>
+        <p class="name-details reveal-up" data-delay="650">B.Sc. (IT), M.Sc. (IS)</p>
+        <p class="name-parent reveal-up" data-delay="700">D/o Haji A. Awliya Mohamed, Thopputhurai</p>
+      </div>
+
+      <p class="inv-honor reveal-up" data-delay="800">REQUEST THE HONOR OF YOUR PRESENCE</p>
+
+      <!-- Free-floating Details (NO box) -->
+      <div class="details-float reveal-up" data-delay="900">
+        <div class="detail-item">
+          <div class="detail-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <p class="detail-item__label">Date</p>
+          <p class="detail-item__value">Sunday, 19th July</p>
+          <p class="detail-item__value--sub">2026 (Hijri 1448 - 4 Safar)</p>
+        </div>
+        <div class="detail-item">
+          <div class="detail-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <p class="detail-item__label">Time</p>
+          <p class="detail-item__value">11:30 AM</p>
+          <p class="detail-item__value--sub">Onwards</p>
+        </div>
+        <div class="detail-item">
+          <div class="detail-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <p class="detail-item__label">Venue</p>
+          <p class="detail-item__value">Amman Marriage</p>
+          <p class="detail-item__value--sub">Hall</p>
+        </div>
+        <div class="detail-item">
+          <div class="detail-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          </div>
+          <p class="detail-item__label">Location</p>
+          <p class="detail-item__value">Thopputhurai</p>
+          <p class="detail-item__value--sub">R.S. Road</p>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="cosmic-actions reveal-up" data-delay="1100">
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Shaheel+%26+Atheera+Nikkah&amp;dates=20260719T060000Z/20260719T090000Z&amp;details=Nikkah+Ceremony+of+Shaheel+and+Atheera&amp;location=Amman+Marriage+Hall,+R.+S.+Road,+Thopputhurai" target="_blank" class="cosmic-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Add to Calendar</span>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Amman+Marriage+Hall+R.+S.+Road+Thopputhurai" target="_blank" class="cosmic-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Get Directions</span>
+        </a>
+      </div>
+
+      <a href="#page-two" class="space-scroll reveal-up" data-delay="1200">
+        <span>Continue</span>
+        <div class="space-scroll__line"></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE 2 — ORB COUNTDOWN + RSVP
+  ═══════════════════════════════════════════════ -->
+  <section id="page-two" class="page-two">
+    <div class="container">
+
+      <!-- Orb Countdown -->
+      <div class="orb-countdown reveal-up">
+        <p class="orb-countdown__label">THE BIG DAY APPROACHES</p>
+        <div class="orb-countdown__grid">
+          <div class="orb-countdown__unit">
+            <span class="orb-countdown__number" id="cd-days">000</span>
+            <span class="orb-countdown__text">Days</span>
+          </div>
+          <span class="orb-countdown__sep">&#xb7;</span>
+          <div class="orb-countdown__unit">
+            <span class="orb-countdown__number" id="cd-hours">00</span>
+            <span class="orb-countdown__text">Hours</span>
+          </div>
+          <span class="orb-countdown__sep">&#xb7;</span>
+          <div class="orb-countdown__unit">
+            <span class="orb-countdown__number" id="cd-minutes">00</span>
+            <span class="orb-countdown__text">Mins</span>
+          </div>
+          <span class="orb-countdown__sep">&#xb7;</span>
+          <div class="orb-countdown__unit">
+            <span class="orb-countdown__number" id="cd-seconds">00</span>
+            <span class="orb-countdown__text">Secs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Constellation Divider -->
+      <div class="constellation-divider">
+        <div class="constellation-divider__dot"></div>
+        <div class="constellation-divider__line"></div>
+        <div class="constellation-divider__dot constellation-divider__dot--center"></div>
+        <div class="constellation-divider__line"></div>
+        <div class="constellation-divider__dot"></div>
+      </div>
+
+      <!-- Cosmic RSVP -->
+      <div class="cosmic-rsvp reveal-up" data-delay="200">
+        <p class="cosmic-rsvp__label">Will You Be There?</p>
+        <p class="cosmic-rsvp__sub">WE WOULD LOVE TO HAVE YOU</p>
+        <div id="rsvp-form-container">
+          <input type="text" id="guest-name" class="cosmic-input" placeholder="Your Name" required />
+          <div class="cosmic-rsvp__choices">
+            <button type="button" class="cosmic-rsvp__choice cosmic-rsvp__choice--yes active" id="btn-yes">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span>Yes, with joy! &#x1F60A;</span>
+            </button>
+            <button type="button" class="cosmic-rsvp__choice cosmic-rsvp__choice--no" id="btn-no">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+              <span>Sorry, I can't make it</span>
+            </button>
+          </div>
+          <button type="button" id="btn-submit-rsvp" class="cosmic-btn cosmic-btn--submit">Confirm RSVP</button>
+        </div>
+        <div id="rsvp-success" style="display: none; padding: 2rem 0;">
+          <p class="cosmic-rsvp__label" style="color: var(--nebula-purple);">Thank You!</p>
+          <p class="cosmic-rsvp__sub" style="margin-bottom: 0;">YOUR RESPONSE HAS BEEN RECEIVED</p>
+        </div>
+      </div>
+
+      <!-- Cosmic Footer -->
+      <div class="cosmic-footer">
+        <div class="cosmic-footer__line">
+          <div class="cosmic-footer__line-seg"></div>
+          <div class="cosmic-footer__star"></div>
+          <div class="cosmic-footer__line-seg"></div>
+        </div>
+        <p class="cosmic-footer__names">Shaheel &amp; Atheera</p>
+        <p class="cosmic-footer__date">19 &middot; 07 &middot; 2026</p>
+        <p class="cosmic-footer__tag">#ShaheelAtheera2026</p>
+        
+        <!-- Host / Invitation Card Info -->
+        <div style="margin: 2.5rem 0; font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.6); line-height: 1.8;">
+          <p style="text-transform: uppercase; font-size: 0.55rem; color: var(--nebula-purple); letter-spacing: 0.25em; margin-bottom: 0.4rem; font-weight: 600;">Invited By</p>
+          <p style="font-weight: 500; font-size: 0.85rem; color: #fff;">Haji. S. H. Shagabtheen</p>
+          <p>Thopputhurai</p>
+          <p style="margin-top: 0.3rem;"><a href="tel:+919842451845" style="color: var(--nebula-blue); text-decoration: underline;">Ph: +91 98424 51845</a></p>
+        </div>
+
+        <p class="cosmic-footer__credit">
+          CREATED BY <span>DEVBIES</span> &bull; <span>SALEEL ZAKKARIYA</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <script type="module" src="/main.js"></script>
+
+  <script>
+    // RSVP toggle
+    const yesBtn = document.getElementById('btn-yes');
+    const noBtn = document.getElementById('btn-no');
+    if (yesBtn && noBtn) {
+      yesBtn.addEventListener('click', () => {
+        yesBtn.classList.add('active');
+        noBtn.classList.remove('active');
+      });
+      noBtn.addEventListener('click', () => {
+        noBtn.classList.add('active');
+        yesBtn.classList.remove('active');
+      });
+    }
+  </script>
+</body>
+</html>

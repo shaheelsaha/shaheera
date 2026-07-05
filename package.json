@@ -1,0 +1,19 @@
+{
+  "name": "shaheera-wedding",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "firebase deploy"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "firebase": "^12.15.0",
+    "firebase-tools": "^15.22.4"
+  }
+}

@@ -10,7 +10,18 @@
   const starRight = document.getElementById('star-right');
   const glitch = document.getElementById('glitch-overlay');
   const flash = document.getElementById('flash-overlay');
+  const bgMusic = document.getElementById('bg-music');
+  const musicToggle = document.getElementById('music-toggle');
+  const iconOn = document.getElementById('icon-sound-on');
+  const iconOff = document.getElementById('icon-sound-off');
   let hasTriggered = false;
+
+  // Randomly select one of the two music tracks
+  if (bgMusic) {
+    const tracks = ['/music1.mp3', '/music2.mp3'];
+    const randomTrack = tracks[Math.floor(Math.random() * tracks.length)];
+    bgMusic.src = randomTrack;
+  }
 
   // Show stars after initial content fades in
   window.addEventListener('load', () => {
@@ -24,6 +35,14 @@
   preloader.addEventListener('click', () => {
     if (hasTriggered) return;
     hasTriggered = true;
+
+    // Start background music 2 seconds after tap (after the collision animation)
+    if (bgMusic) {
+      bgMusic.volume = 0.5;
+      setTimeout(() => {
+        bgMusic.play().catch(() => {});
+      }, 2000);
+    }
 
     // Phase 1: Hide text, start collision
     preloader.classList.add('colliding');
@@ -45,8 +64,35 @@
       preloader.style.pointerEvents = 'none';
       preloader.classList.add('hidden');
       triggerHeroAnimations();
+
+      // Show music toggle button
+      if (musicToggle) {
+        musicToggle.classList.add('visible');
+        if (!bgMusic.paused) {
+          musicToggle.classList.add('playing');
+          if (iconOn) iconOn.style.display = 'block';
+          if (iconOff) iconOff.style.display = 'none';
+        }
+      }
     }, 1900);
   });
+
+  // Music toggle button
+  if (musicToggle && bgMusic) {
+    musicToggle.addEventListener('click', () => {
+      if (bgMusic.paused) {
+        bgMusic.play().catch(() => {});
+        musicToggle.classList.add('playing');
+        if (iconOn) iconOn.style.display = 'block';
+        if (iconOff) iconOff.style.display = 'none';
+      } else {
+        bgMusic.pause();
+        musicToggle.classList.remove('playing');
+        if (iconOn) iconOn.style.display = 'none';
+        if (iconOff) iconOff.style.display = 'block';
+      }
+    });
+  }
 })();
 
 function triggerHeroAnimations() {
@@ -217,41 +263,41 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const btnSubmit = document.getElementById('btn-submit-rsvp');
-const guestNameInput = document.getElementById('guest-name');
 const rsvpContainer = document.getElementById('rsvp-form-container');
-const rsvpSuccess = document.getElementById('rsvp-success');
+const rsvpYesResponse = document.getElementById('rsvp-yes-response');
+const rsvpNoResponse = document.getElementById('rsvp-no-response');
 const yesBtn = document.getElementById('btn-yes');
+const noBtn = document.getElementById('btn-no');
 
-if (btnSubmit && guestNameInput && rsvpContainer && rsvpSuccess && yesBtn) {
-  btnSubmit.addEventListener('click', async () => {
-    const name = guestNameInput.value.trim();
-    if (!name) {
-      guestNameInput.style.borderColor = 'rgba(244,63,94,0.8)';
-      return;
-    }
-    
-    const isAttending = yesBtn.classList.contains('active');
-    
-    btnSubmit.innerHTML = '<span>Sending...</span>';
-    btnSubmit.style.pointerEvents = 'none';
+async function submitRSVP(attending) {
+  // Hide the form immediately
+  if (rsvpContainer) rsvpContainer.style.display = 'none';
 
-    try {
-      await addDoc(collection(db, "rsvps"), {
-        name: name,
-        attending: isAttending,
-        timestamp: new Date()
-      });
-      
-      rsvpContainer.style.display = 'none';
-      rsvpSuccess.style.display = 'block';
-      rsvpSuccess.classList.add('reveal-up', 'visible');
-    } catch (e) {
-      console.error("Error adding document: ", e);
-      btnSubmit.innerHTML = '<span>Error. Try Again</span>';
-      btnSubmit.style.pointerEvents = 'auto';
-    }
-  });
+  // Show the appropriate response
+  if (attending && rsvpYesResponse) {
+    rsvpYesResponse.style.display = 'block';
+    rsvpYesResponse.classList.add('reveal-up', 'visible');
+  } else if (!attending && rsvpNoResponse) {
+    rsvpNoResponse.style.display = 'block';
+    rsvpNoResponse.classList.add('reveal-up', 'visible');
+  }
+
+  // Save to Firestore
+  try {
+    await addDoc(collection(db, "rsvps"), {
+      attending: attending,
+      timestamp: new Date()
+    });
+  } catch (e) {
+    console.error("Error saving RSVP: ", e);
+  }
+}
+
+if (yesBtn) {
+  yesBtn.addEventListener('click', () => submitRSVP(true));
+}
+if (noBtn) {
+  noBtn.addEventListener('click', () => submitRSVP(false));
 }
 
 // ── SMOOTH SCROLL for anchor links ────────────────

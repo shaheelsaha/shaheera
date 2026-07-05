@@ -105,10 +105,11 @@
        PAGE 1 — IMMERSIVE INVITATION
        ═══════════════════════════════════════ */
     .hero {
+      position: relative;
       min-height: 100vh; min-height: 100dvh;
       display: flex; align-items: center; justify-content: center;
       text-align: center; background: transparent !important;
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 6rem 1rem; /* Added bottom padding to avoid overlapping with absolute continue button */
     }
     .hero__bg-pattern, .hero__overlay { display: none !important; }
     .hero__content {
@@ -328,6 +329,10 @@
 
     /* Scroll CTA */
     .space-scroll {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
       display: inline-flex; flex-direction: column; align-items: center;
       gap: 0.6rem; color: rgba(255,255,255,0.15);
       font-family: var(--sans); font-size: 0.55rem;
@@ -350,7 +355,7 @@
        ═══════════════════════════════════════ */
     .page-two {
       position: relative; z-index: 2;
-      padding: 6rem 0 3rem; background: transparent;
+      padding: 3rem 0 3rem; background: transparent;
     }
     .page-two .container {
       position: relative; z-index: 2;
@@ -650,9 +655,55 @@
       opacity: 0;
       pointer-events: none;
     }
+
+    /* ── MUSIC TOGGLE BUTTON ── */
+    .music-toggle {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(192,132,252,0.25);
+      background: rgba(5,5,16,0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transform: scale(0);
+      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16,1,0.3,1), border-color 0.3s, box-shadow 0.3s;
+      color: rgba(192,132,252,0.6);
+    }
+    .music-toggle.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .music-toggle:hover {
+      border-color: rgba(192,132,252,0.5);
+      box-shadow: 0 0 20px rgba(192,132,252,0.15);
+      color: rgba(192,132,252,0.9);
+    }
+    .music-toggle svg {
+      width: 20px;
+      height: 20px;
+    }
+    .music-toggle.playing {
+      animation: musicPulse 2s ease-in-out infinite;
+    }
+    @keyframes musicPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(192,132,252,0.2); }
+      50% { box-shadow: 0 0 0 8px rgba(192,132,252,0); }
+    }
   </style>
 </head>
 <body>
+
+  <!-- ═ BACKGROUND MUSIC ═ -->
+  <audio id="bg-music" src="/music.mp3" loop preload="auto"></audio>
 
   <!-- ═ ANIMATED SPACE BACKGROUND ═ -->
   <div class="space-bg">
@@ -686,7 +737,7 @@
     <div class="preloader__inner" style="z-index: 10;">
       <p class="preloader__arabic" style="font-family: var(--serif); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 400; letter-spacing: 0.15em; margin-bottom: 1.2rem; direction: ltr; background: linear-gradient(135deg, #fff, rgba(192,132,252,0.8)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">S &amp; A</p>
       <p style="font-family: 'Amiri', serif; font-size: 1.6rem; color: rgba(255,255,255,0.9); margin-bottom: 0.3rem; direction: rtl;">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
-      <p class="preloader__translation" style="font-size: 0.85rem; color: rgba(192,132,252,0.7); font-style: italic; letter-spacing: 0.06em;">In the name of God, the Most Gracious, the Most Merciful</p>
+      <p class="preloader__translation" style="font-size: 0.85rem; color: rgba(192,132,252,0.7); font-style: italic; letter-spacing: 0.06em;">In the name of Allah, the Most Beneficent, the Most Merciful</p>
       <div class="preloader__line" style="background: linear-gradient(90deg, transparent, var(--nebula-purple), transparent); margin-top: 2rem;"></div>
     </div>
     
@@ -712,13 +763,12 @@
       <div class="hero__ornament-frame"></div>
 
       <p class="inv-arabic reveal-up">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
-      <p class="inv-blessing reveal-up">In the name of God, the Most Gracious, the Most Merciful</p>
+      <p class="inv-blessing reveal-up">In the name of Allah, the Most Beneficent, the Most Merciful</p>
       <p class="inv-families reveal-up" data-delay="100">TOGETHER WITH THEIR FAMILIES</p>
 
       <!-- Names with Orbital Ring -->
       <div class="names-block">
         <span class="name-main reveal-up" data-delay="200">Shaheel Ahamed</span>
-        <p class="name-details reveal-up" data-delay="250">M.B.A. (Entrepreneurship)</p>
         <p class="name-parent reveal-up" data-delay="300">S/o Haji S. H. Shagabtheen, Thopputhurai</p>
         
         <div class="orbital-ring reveal-up" data-delay="400">
@@ -729,7 +779,6 @@
         </div>
         
         <span class="name-main reveal-up" data-delay="600">Atheera</span>
-        <p class="name-details reveal-up" data-delay="650">B.Sc. (IT), M.Sc. (IS)</p>
         <p class="name-parent reveal-up" data-delay="700">D/o Haji A. Awliya Mohamed, Thopputhurai</p>
       </div>
 
@@ -777,7 +826,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           <span>Add to Calendar</span>
         </a>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Amman+Marriage+Hall+R.+S.+Road+Thopputhurai" target="_blank" class="cosmic-btn">
+        <a href="https://maps.app.goo.gl/MUoJCJFx7RVGE8hq9" target="_blank" class="cosmic-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <span>Get Directions</span>
         </a>
@@ -836,9 +885,8 @@
         <p class="cosmic-rsvp__label">Will You Be There?</p>
         <p class="cosmic-rsvp__sub">WE WOULD LOVE TO HAVE YOU</p>
         <div id="rsvp-form-container">
-          <input type="text" id="guest-name" class="cosmic-input" placeholder="Your Name" required />
           <div class="cosmic-rsvp__choices">
-            <button type="button" class="cosmic-rsvp__choice cosmic-rsvp__choice--yes active" id="btn-yes">
+            <button type="button" class="cosmic-rsvp__choice cosmic-rsvp__choice--yes" id="btn-yes">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
               <span>Yes, with joy! &#x1F60A;</span>
             </button>
@@ -847,11 +895,14 @@
               <span>Sorry, I can't make it</span>
             </button>
           </div>
-          <button type="button" id="btn-submit-rsvp" class="cosmic-btn cosmic-btn--submit">Confirm RSVP</button>
         </div>
-        <div id="rsvp-success" style="display: none; padding: 2rem 0;">
-          <p class="cosmic-rsvp__label" style="color: var(--nebula-purple);">Thank You!</p>
-          <p class="cosmic-rsvp__sub" style="margin-bottom: 0;">YOUR RESPONSE HAS BEEN RECEIVED</p>
+        <div id="rsvp-yes-response" style="display: none; padding: 2rem 0; text-align: center;">
+          <p class="cosmic-rsvp__label" style="color: var(--nebula-purple); font-size: 2rem;">Thank You! ✨</p>
+          <p class="cosmic-rsvp__sub" style="margin-bottom: 0; color: rgba(255,255,255,0.7); font-size: 1.1rem;">We are so happy to have you celebrate with us.<br/>See you on the big day! 💜</p>
+        </div>
+        <div id="rsvp-no-response" style="display: none; padding: 2rem 0; text-align: center;">
+          <p class="cosmic-rsvp__label" style="color: var(--nebula-pink); font-size: 2rem;">We'll Miss You 💫</p>
+          <p class="cosmic-rsvp__sub" style="margin-bottom: 0; color: rgba(255,255,255,0.7); font-size: 1.1rem;">Your presence would have made it even more special.<br/>You'll always be in our hearts. 🤍</p>
         </div>
       </div>
 
@@ -875,29 +926,31 @@
         </div>
 
         <p class="cosmic-footer__credit">
-          CREATED BY <span>DEVBIES</span> &bull; <span>SALEEL ZAKKARIYA</span>
+          Made with &hearts; by <span>Shaheel &amp; Atheera</span>
         </p>
       </div>
 
     </div>
   </section>
 
+  <!-- ═ MUSIC TOGGLE BUTTON ═ -->
+  <button id="music-toggle" class="music-toggle" aria-label="Toggle Music">
+    <!-- Speaker On icon (shown when playing) -->
+    <svg id="icon-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+    </svg>
+    <!-- Speaker Off icon (shown when muted) -->
+    <svg id="icon-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+      <line x1="23" y1="9" x2="17" y2="15"/>
+      <line x1="17" y1="9" x2="23" y2="15"/>
+    </svg>
+  </button>
+
   <script type="module" src="/main.js"></script>
 
-  <script>
-    // RSVP toggle
-    const yesBtn = document.getElementById('btn-yes');
-    const noBtn = document.getElementById('btn-no');
-    if (yesBtn && noBtn) {
-      yesBtn.addEventListener('click', () => {
-        yesBtn.classList.add('active');
-        noBtn.classList.remove('active');
-      });
-      noBtn.addEventListener('click', () => {
-        noBtn.classList.add('active');
-        yesBtn.classList.remove('active');
-      });
-    }
-  </script>
+
 </body>
 </html>
